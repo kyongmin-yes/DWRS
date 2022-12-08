@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/item_comments_nickname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="작성자 : nickname"
+        android:layout_marginLeft="10dp"
+        android:backgroundTint="#3498DB"
+        android:textSize="17sp"
+        android:padding="15sp"
+        android:textStyle="bold"
+        android:textColor="#3498DB"/>
+
+    <TextView
+        android:id="@+id/item_comments_comments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="comments"
+        android:layout_marginLeft="20dp"
+        android:textSize="16sp"
+        android:textColor="@color/black"/>
+
+
+</LinearLayout>

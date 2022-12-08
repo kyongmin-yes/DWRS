@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "563346325923",
+    "project_id": "dwrs-7b933",
+    "storage_bucket": "dwrs-7b933.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:563346325923:android:29b5f64a0a26a8c6171a16",
+        "android_client_info": {
+          "package_name": "com.makeandroid.dwrs"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "563346325923-6p088smklc5cj4o85scb4mrimjhp97jv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBoqvPVO6PPtNjJ1HYirKJyx2UrChgobGY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "563346325923-6p088smklc5cj4o85scb4mrimjhp97jv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
