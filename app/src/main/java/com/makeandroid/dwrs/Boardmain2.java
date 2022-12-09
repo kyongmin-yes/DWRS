@@ -67,7 +67,7 @@ public class Boardmain2 extends AppCompatActivity implements View.OnClickListene
     public void onStart() {
         super.onStart();
         mdatas = new ArrayList<>(); // 리스트 객체 생성
-        mStore.collection(UserAccount.machineBreakdown)//저장소에서 포스트에 해당하는 데이터 불러오기
+        mStore.collection(UserAccount.machinePost)//저장소에서 포스트에 해당하는 데이터 불러오기
                 .orderBy(UserAccount.Timestamp, Query.Direction.DESCENDING)// 시간 찍는 쿼리
                 .get()//가져오기
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
@@ -116,7 +116,7 @@ public class Boardmain2 extends AppCompatActivity implements View.OnClickListene
         dialog.setPositiveButton("삭제", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {//데이터 삭제!!
-                mStore.collection(UserAccount.machineBreakdown).document(mdatas.get(position).getUid()).delete();
+                mStore.collection(UserAccount.machinePost).document(mdatas.get(position).getUid()).delete();
                 Toast.makeText(Boardmain2.this, "삭제 되었습니다.", Toast.LENGTH_SHORT).show();
             }
         }).setNegativeButton("취소", new DialogInterface.OnClickListener() {

@@ -56,7 +56,7 @@ public class Fraginfo extends Fragment {
             }
         });
 
-        if (mAuth.getCurrentUser() != null) {
+        if (mAuth.getCurrentUser() != null) {//닉네임 표시
             mStore.collection(UserAccount.user).document(mAuth.getCurrentUser().getUid())//nickname 가져옴
                     .get()
                     .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {

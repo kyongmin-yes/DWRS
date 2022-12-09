@@ -22,6 +22,9 @@
             android:name=".Booking_select"
             android:exported="false" />
         <activity
+            android:name=".Booking_option"
+            android:exported="false" />
+        <activity
             android:name=".Boardread"
             android:exported="false" />
         <activity

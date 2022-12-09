@@ -71,7 +71,7 @@ public class Boardread2 extends AppCompatActivity implements RecyclerViewitemcli
         mcomments = findViewById(R.id.boardread2_comment_text);
         mwritecomments = findViewById(R.id.boardread2_comment_writebtn);
 
-        mStore.collection(UserAccount.machineBreakdown).document(id)
+        mStore.collection(UserAccount.machinePost).document(id)
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
                     @Override
@@ -111,12 +111,11 @@ public class Boardread2 extends AppCompatActivity implements RecyclerViewitemcli
                 @Override
                 public void onClick(View v) {
                     if (mAuth.getCurrentUser() != null) {
-                        String postid = mStore.collection(UserAccount.machineBreakdown).document().getId();// 안겹치게 id 부여
+                        String postid = mStore.collection(UserAccount.machinePost).document().getId();// 안겹치게 id 부여
                         Map<String, Object> data = new HashMap<>();
                         data.put(Uid, postid);
                         data.put(UserAccount.Comments, mcomments.getText().toString());
                         data.put(UserAccount.Nickname, nickname);
-                        data.put(UserAccount.machineBreakdown, null);
                         mStore.collection(UserAccount.Breakdowncomments).document(postid).set(data, SetOptions.merge());
                         Toast.makeText(Boardread2.this, "댓글이 등록되었습니다.", Toast.LENGTH_SHORT).show();
                         Intent intent = getIntent();//새로고침
@@ -174,7 +173,7 @@ public class Boardread2 extends AppCompatActivity implements RecyclerViewitemcli
         dialog.setPositiveButton("삭제", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {//데이터 삭제!!
-                mStore.collection(UserAccount.machineBreakdown).document(mdatas.get(position).getUid()).delete();
+                mStore.collection(UserAccount.Breakdowncomments).document(mdatas.get(position).getUid()).delete();
                 Toast.makeText(Boardread2.this, "삭제 되었습니다.", Toast.LENGTH_SHORT).show();
             }
         }).setNegativeButton("취소", new DialogInterface.OnClickListener() {

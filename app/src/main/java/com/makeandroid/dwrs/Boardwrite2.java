@@ -54,15 +54,14 @@ public class Boardwrite2 extends AppCompatActivity implements View.OnClickListen
     @Override
     public void onClick(View v){
         if(mAuth.getCurrentUser() != null){
-            String postid = mStore.collection(UserAccount.machineBreakdown).document().getId();// 안겹치게 id 부여
+            String postid = mStore.collection(UserAccount.machinePost).document().getId();// 안겹치게 id 부여
             Map<String, Object> data = new HashMap<>();
             data.put(UserAccount.Uid, postid);
             data.put(UserAccount.Title, mtitle.getText().toString());
             data.put(UserAccount.Contents, mcontents.getText().toString());
             data.put(UserAccount.Nickname, nickname);
             data.put(UserAccount.Timestamp, FieldValue.serverTimestamp());
-            data.put(UserAccount.machineBreakdown, null);
-            mStore.collection(UserAccount.machineBreakdown).document(postid).set(data, SetOptions.merge());
+            mStore.collection(UserAccount.machinePost).document(postid).set(data, SetOptions.merge());
             finish();
         }
     }
