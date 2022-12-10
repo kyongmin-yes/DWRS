@@ -51,7 +51,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="42dp"
         android:layout_marginTop="260dp"
-        android:text="분실물 신고"
+        android:text="자유 게시판"
         android:textColor="@color/black"
         android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
