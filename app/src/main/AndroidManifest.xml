@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DWRS">
+
         <activity
             android:name=".Booking_end"
             android:exported="false" />

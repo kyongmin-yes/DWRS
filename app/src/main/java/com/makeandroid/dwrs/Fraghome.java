@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -28,7 +29,7 @@ import model.Post;
 public class Fraghome extends Fragment {
 
     private Button reservation;
-
+    private Button registerUse;
 
 
     @Override
@@ -36,6 +37,7 @@ public class Fraghome extends Fragment {
         View v = inflater.inflate(R.layout.fraghome, container, false);
 
         reservation = v.findViewById(R.id.home_btn_booking);
+        registerUse = v.findViewById(R.id.home_btn_registerUse);
 
 
 
@@ -44,6 +46,13 @@ public class Fraghome extends Fragment {
                 public void onClick(View v) {//예약하기 -> 세탁기 선택 창으로
                     Intent intent = new Intent(getActivity(), Booking_select.class);
                     startActivity(intent);
+                }
+            });
+
+            registerUse.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Toast.makeText(getActivity(), "예약이 확정 되었습니다.", Toast.LENGTH_SHORT).show();
                 }
             });
 
